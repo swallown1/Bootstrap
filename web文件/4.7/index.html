@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>导航创建</title>
+		<!--bootstrap的引入-->
+		<link rel="stylesheet" href="../../bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+		<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="../../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<!--nav-tabs是出现导航栏的重要class -->
+			<!--胶囊式导航栏  nav-pills-->
+			<!--垂直展示的导航栏 nav-stacked-->
+			<!--充满横屏 nav-justified-->
+			<ul class="nav nav-pills nav-stacked nav-justified" role="tablist">
+				<li class="dropdown active">
+					<a href="#" class="btn btn-block" data-toggle = "dropdown">HTML5</a>
+					<ul class="dropdown-menu">
+						<li><a href="#">HTML</a></li>
+						<li><a href="#">HTML</a></li>
+						<li><a href="#">HTML</a></li>
+					</ul>
+				</li>
+				
+				
+				<li role="presentation"><a href="#">CSS3</a></li>
+				<li role="presentation"><a href="#">JavaScript</a></li>
+			</ul>
+			
+		</div>
+		<script type="text/javascript">
+			$("ul li").mousemove(function(e){
+				 e.preventDefault();//阻止a链接的跳转行为 
+          		$(this).tab('show');//显示当前选中的链接及关联的content 
+			});
+		</script>
+	</body>
+</html>

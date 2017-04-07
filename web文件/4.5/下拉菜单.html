@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+		<!--bootstrap的引入-->
+		<link rel="stylesheet" href="../../bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+		<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="../../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+	</head>
+	<body>
+		<!--图标的引用/-->
+		<span class="glyphicon glyphicon-fast-backward"></span>
+		<!--警告框-->
+		<div class="alert alert-danger" role="alert">
+			<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+			
+			<span class="sr-only">Error:</span>
+			输入有效的电子邮件地址
+		</div>
+		
+		<button type="button" class="btn btn-default" aria-label="Right Align">
+		  <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+		</button>
+		
+		<button type="button" class="btn btn-default btn-lg">
+		  <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Star
+		</button>
+	
+		
+		<!--下拉菜单-->
+		<!--往右移 1.在dropdown 加一个 pull-right  2.在ul里加一个dropdown-menu-right-->
+			<div class="dropdown pull-right">
+				<a class="btn btn-default dropdown-toggle" role="button" data-toggle="dropdown">
+					下拉菜单
+					<span class="caret"></span>
+				</a>
+				<ul class="dropdown-menu dropdown-menu-right" role="dropdown" >
+					<li class="dropdwon-header">前端学习</li>
+					<li><a  href="#" role="menuitem">HTML</a></li>
+					<li><a  href="#" role="menuitem">javaScript</a></li>
+					<li><a  href="#" role="menuitem">jQuery</a></li>
+					<li><a  href="#" role="menuitem">Bootstrap</a></li>
+					<li class="divider"></li>
+					<li class="disabled"><a   href="#" role="menuitem">HTML</a></li>
+					<li><a  href="#" role="menuitem">javaScript</a></li>
+					<li><a  href="#" role="menuitem">jQuery</a></li>
+					<li><a  href="#" role="menuitem">Bootstrap</a></li>
+				</ul>
+			</div>			
+
+			
+			<!--按钮事件  通过data-loding-text属性添加按钮加载过程效果-->
+		<!--<button  class="btn btn-primary" data-loading-text="Loading..."
+			type="button"> 加载状态
+			</button>
+			<script>
+				$(function() {
+					$(".btn").click(function(){
+					$(this).button('loading').delay(1000).queue(function() {
+						//还原回去
+						$(this).button('reset');
+						});
+					});
+				});
+			</script>-->
+		
+	</body>
+</html>

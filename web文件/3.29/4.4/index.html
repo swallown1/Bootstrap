@@ -1,0 +1,100 @@
+
+
+<!--/*
+ bootstrap栏杆式布局
+ 
+ */-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+		<!--bootstrap的引入-->
+		<link rel="stylesheet" href="../../bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+		<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="../../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+		<style type="text/css">
+			.row{
+				margin-bottom: 10px;
+			}
+			.row .row{
+				margin-top: 10px;
+				margin-bottom: 0;
+				
+			}
+			[class*="col-"]{
+				padding-top:15px ;
+				padding-bottom: 15px;
+				border: 1px solid #eee;
+			 	 background-color: rgba(45,52,158,0.15);
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		<!--栅栏式布局-->
+		<!--最大的容器-->
+		<div class="container">
+			<div class="row">
+				<div class="col-md-1">col-md-1</div>
+				<div class="col-md-1">col-md-1</div>
+				<div class="col-md-1">col-md-1</div>
+				<div class="col-md-1">col-md-1</div>
+				<div class="col-md-1">col-md-1</div>
+				<div class="col-md-1">col-md-1</div>
+				<div class="col-md-1">col-md-1</div>
+				<div class="col-md-1">col-md-1</div>
+				<div class="col-md-1">col-md-1</div>
+				<div class="col-md-1">col-md-1</div>
+				<div class="col-md-1">col-md-1</div>
+				<div class="col-md-1">col-md-1</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md-4">col-md-4</div>
+				<div class="col-md-4">col-md-4</div>
+				<div class="col-md-4">col-md-4</div>
+			</div>
+			<!--偏移 margin实现的-->
+			<div class="row">
+				<div class="col-md-3 col-md-offset-4">col-md-3</div>
+			</div>
+			
+			<!--包含多个-->
+			<div class="row">
+				<div class="col-xs-9">
+					<div class="row">
+						<div class="col-xs-2">col-xs-2</div>
+						
+						<div class="col-xs-6">col-xs-6</div>
+					</div>
+				</div>
+			</div>
+			
+			<!--排序 浮动实现的-->
+			<div class="row">
+				<div class="col-md-7 col-md-push-3">col-md-7</div>
+				
+				<div class="col-md-3 col-md-pull-7">col-md-3</div>
+				
+			</div>
+			
+			
+			<!--代码块-->
+			<code> &lt;div&gt;&lt;/div&gt;</code>
+			
+			<pre>
+				this is a examp....
+			</pre>
+			
+			<kbd>cmd  用户输入区</kbd><br />
+			
+			<var>这里可以输出变量</var><br />
+			
+			<samp>程序输出</samp>
+			
+		</div>
+	</body>
+</html>

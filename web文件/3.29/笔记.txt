@@ -1,0 +1,11 @@
+1.为了让 Bootstrap 开发的网站对移动设备友好，确保适当的绘制和触屏缩放，
+需要在网页的 head 之中添加 viewport meta 标签，如下所示：
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+width 属性控制设备的宽度。假设您的网站将被带有不同屏幕分辨率的设备浏览，那么将它设置为 device-width 
+可以确保它能正确呈现在不同设备上。initial-scale=1.0 确保网页加载时，以 1:1 的比例呈现，不会有任何的缩放。
+
+2.引入文件
+	<link rel="stylesheet" href="../../bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+	jQuery文件一定在第一个 不然会出问题
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="../../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
