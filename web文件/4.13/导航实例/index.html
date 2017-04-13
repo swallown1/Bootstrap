@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<script src="../../../bootstrap-3.3.7-dist/js/jquery-1.11.3.min.js"></script>
+		<script src="js/bootstrap3.0.3.min.js"></script>
+		<link rel="stylesheet" href="css/style.css">
+	</head> 
+	<body>
+		
+		<div class="nav navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<a href="index.html"><img src="img/logo.png"/></a>
+				</div>
+				<div class="collapse navbar-collapse " role="collaspe" id="mynav">
+					<ul class="nav navbar-nav navbar-right" style="margin-top: ;" >
+						<li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span> 首页</a></li>
+						<li><a href="#"><span class="glyphicon glyphicon-list"></span> 资讯</a></li>
+						<li><a href="#"><span class="glyphicon glyphicon-fire"></span> 案例</a></li>
+						<li><a href="#"><span class="glyphicon glyphicon-signal"></span> 关于</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="carousel slide" id="mycarousel" data-ride="carousel">
+			<!--定义播放顺序-->
+			<ol class="carousel-indicators">
+				<li class="active" data-target="#mycarousel"  data-slide-to="0"></li>
+				<li  data-target="#mycarousel"  data-slide-to="1"></li>
+				<li  data-target="#mycarousel"  data-slide-to="2"></li>
+			</ol>
+			<!--定义播放图片-->
+			<div class="carousel-inner">
+				<div class="item active" style="background:#223240">
+					<img src="img/slide1.png" alt="...">
+				</div>
+				<div class="item" style="background:#F5E4DC"><img src="img/slide2.png" >
+				</div>
+				<div class="item" style="background:#DE2A2D">
+					<img src="img/slide3.png" alt="...">
+				</div>
+			</div>
+			<!--定义播放按钮-->
+			<a class="left carousel-control" data-slide="prev" href="#mycarousel">&lsaquo;</a>
+			<a class="right carousel-control" data-slide="next" href="#mycarousel">&rsaquo;</a>
+		</div>
+
+
+		<script type="text/javascript">
+			$("#mynav a").click(function(e){
+				e.preventDefault();
+				$(this).tab("show");
+			});
+			$(function(){
+				$('.carousel-control').css('line-height',$('.item img').height()+'px');
+
+				$(window).resize(function(){
+					var $height=$('.carousel-inner img').eq(0).height()||
+								$('.carousel-inner img').eq(1).height()||
+								$('.carousel-inner  img').eq(2).height();
+					$('.carousel-control').css('line-height',$height+'px');
+				});
+
+
+			});
+
+
+		</script>
+	</body>
+</html>

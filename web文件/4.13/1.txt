@@ -1,0 +1,24 @@
+第一点  用carousel 和 slide类  轮播内容全部放在这个类中  定义id  slidershow
+方便data属性来声明触发、data-ride属性取值carousel 将其定义在carousel
+第二点  定义播放顺序 carousel-indicators 用ol il标签
+li里面的data-target定义slidershow定在轮播图里 data-slide-to调到其他的li
+第三点 定义轮播图片 class 定义为 carousel-inner 然后用div class item
+包裹图片
+第四点  设置控制器 a 类 left carousel-control 设置data-slide  prev   next
+好js控制  span 变成图标
+
+JS
+$().carousel({
+interval :时间
+});
+$("a.left").click(function(){
+    $(".carousel").carousel("next");
+    });
+})
+
+
+.carousel("cycle")：从左向右循环播放；
+.carousel("pause")：停止循环播放；
+.carousel("number")：循环到指定的帧，下标从0开始，类似数组；
+.carousel("prev")：返回到上一帧；
+.carousel("next")：下一帧

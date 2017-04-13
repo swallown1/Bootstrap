@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First</title>
+    <link rel="stylesheet" href="../../bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <script src="../../bootstrap-3.3.7-dist/js/jquery-1.11.3.min.js"></script>
+    <script src="../../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!--第一步  创建一个container-->
+    <div class="container">
+        <!--放到轮播图的类 carousel-->
+        <div class="carousel slide" id="slidershow" data-ride="carousel">
+            <!--第三步 定制播放顺序 用carousel-indicators-->
+                <!--用ol来定义图下面的圆圈  -->
+             <ol class="carousel-indicators" >
+                  <li class="active" data-target="#slidershow" data-slide-to="0"></li>
+
+                 <li data-target="#slidershow" data-slide-to="1"></li>
+                 <li data-target="#slidershow" data-slide-to="2"></li>
+              </ol>
+
+            <!--设置轮播图片 用carousel-inner 每个图片用Item包裹-->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <a href="#"><img src="images/tooopen_sy_124241825515.jpg" alt=""></a>
+                    <div class="carousel-caption">
+                        <h3>图片一</h3>
+                        <p>这是第一副图片 这里是介绍内容</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="#"><img src="images/tooopen_sy_142348777623.jpg" alt=""></a>
+                </div>
+                <div class="item">
+                    <a href="#"><img src="images/tooopen_sy_124241825515.jpg" alt=""></a>
+                </div>
+            </div>
+
+            <!--设置轮播图控制器-->
+            <!--用left carousel-control  还有glyphicon glyphicon-chevron-left是图标-->
+            <a href="#slidershow" class="left carousel-control" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a href="#slidershow" class="right carousel-control" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $("#slidershow").carousel({
+                interval:3000
+            });
+            $("#slidershow a.left").click(function(){
+                $(".carousel").carousel("next");
+            });
+            $("#slidershow a.right").click(function(){
+                $(".carousel").carousel("prev");
+            });
+        });
+    </script>
+</body>
+</html>

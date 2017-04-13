@@ -1,0 +1,16 @@
+.item img{
+ margin: 0 auto;
+}
+.logo {
+    padding:0;
+}
+#mycarousel {
+    margin: 50px 0 0 0;
+}
+
+.carousel-inner img {
+    margin: 0 auto;
+}
+.carousel-control {
+    font-size: 100px;
+}
